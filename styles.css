@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    /* working on the background. */
+    min-height: 100vh; 
+    background: url("google-crowdsource-bg-img.png"); 
+    background-size: stretch;
+    background-repeat: no-repeat; 
+    background-position: center;
+    /* font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* working on the navbar: */
+nav{
+    background-color: #fff; 
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);  
+}
+/* working on navbar ul. */
+nav ul{
+    width: 100%; 
+    list-style: none; 
+    display: flex; 
+    /* flex-direction: column; */
+    justify-content: flex-end; 
+    align-items: center; 
+}
+/* working on the list elements: */
+nav li{
+    height: 50px;
+    padding: 0 30px; 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+    color: black; 
+}
+
+nav li:hover{
+    background-color: #f0f0f0;
+}
+
+/* separating the first li from the rest */
+nav li:first-child{
+    margin-right: auto;
+}
+
+/* working on the sidebar:  */
+.sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0; 
+    height: 100vh; 
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width:100%; 
+}
+.menu-button{
+
+}
