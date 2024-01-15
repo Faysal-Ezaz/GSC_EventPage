@@ -53,7 +53,7 @@ nav li:first-child{
 }
 
 /* working on the sidebar:  */
-.sidebar{
+.sideBar{
     position: fixed;
     top: 0; 
     right: 0; 
@@ -63,16 +63,32 @@ nav li:first-child{
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    /* display: flex; */
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
-.sidebar li{
+.sideBar li{
     width:100%; 
 }
+.sideBar a{
+    width: 100%;
+}
 .menu-button{
-
+    display: none;
+}
+/* creating media query to make the website responsive. */
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }   
+    .menu-button{
+        display: block;
+    }
+} 
+@media(max-width: 400px){
+    .sideBar{
+        width: 100%;
+    }
 }
