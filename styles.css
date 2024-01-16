@@ -6,10 +6,6 @@
 body{
     /* working on the background. */
     min-height: 100vh; 
-    background: url("google-crowdsource-bg-img.png"); 
-    background-size: stretch;
-    background-repeat: no-repeat; 
-    background-position: center;
     /* font */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -19,6 +15,7 @@ nav{
     background-color: #fff; 
     box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.4);  
     /* 3px horizontal offset, 3px vertical offset, 50px shadow offset, rgba is the shadow color. */
+    height: 50px;
 }
 /* working on navbar ul. */
 nav ul{
@@ -45,11 +42,20 @@ nav a{
 
 nav li:hover{
     background-color: #f0f0f0;
+    border-radius: 2px;
 }
 
 /* separating the first li from the rest */
 nav li:first-child{
     margin-right: auto;
+}
+
+.background{
+    height: 100vh;
+    background-image: url("google-crowdsource-bg-img.png"); 
+    background-size: stretch;
+    background-repeat: no-repeat; 
+    background-position: center;
 }
 
 /* working on the sidebar:  */
@@ -61,7 +67,7 @@ nav li:first-child{
     width: 250px;
     z-index: 999;
     background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -86,9 +92,15 @@ nav li:first-child{
     .menu-button{
         display: block;
     }
+    .border{
+        background-size:contain;
+    }
 } 
 @media(max-width: 400px){
     .sideBar{
         width: 100%;
+    }
+    .background{
+        background-size:cover;
     }
 }
